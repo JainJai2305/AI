@@ -164,6 +164,16 @@ void challenge(char arr[],char user,char comp)
     {
         ch=move( arr, user, comp) ;
     }
+    if(ch==0 && arr[5]=='e')
+    {
+        arr[5]=comp ;
+        ch++ ;
+    }
+    if(ch==0 && arr[4]=='e')
+    {
+        arr[4]=comp ;
+        ch++ ;
+    }
     if(ch==0)
     {
         int f=rand()%10 ;
