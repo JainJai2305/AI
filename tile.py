@@ -93,12 +93,12 @@ class Puzzle:
         """ Put the start node in the open list"""
         self.open.append(start)
         print("\n\n")
+        count=0
         while True:
+            count+=1
             cur = self.open[0]
-            print("")
-            print("  | ")
-            print("  | ")
-            print(" \\\'/ \n")
+            print()
+            
             for i in cur.data:
                 for j in i:
                     print(j,end=" ")
@@ -114,7 +114,8 @@ class Puzzle:
 
             """ sort the opne list based on f value """
             self.open.sort(key = lambda x:x.fval,reverse=False)
-
+        print("steps taken :",count)
+        print("method used :Heuristic Function")
 
 puz = Puzzle(3)
 puz.process()
